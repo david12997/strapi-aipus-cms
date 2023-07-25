@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tourisms",
+  "info": {
+    "singularName": "tourism",
+    "pluralName": "tourisms",
+    "displayName": "tourism",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_tourism": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "conditions": {
+      "type": "richtext"
+    },
+    "restrictions": {
+      "type": "richtext"
+    },
+    "transport": {
+      "type": "richtext"
+    },
+    "food": {
+      "type": "richtext"
+    },
+    "lodging": {
+      "type": "richtext"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    },
+    "tags": {
+      "type": "text"
+    },
+    "uuid": {
+      "type": "uid"
+    },
+    "inventory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::inventory.inventory",
+      "inversedBy": "tourisms"
+    },
+    "places": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::place.place",
+      "mappedBy": "tourism"
+    },
+    "data_restrictions": {
+      "type": "json"
+    },
+    "data_conditions": {
+      "type": "json"
+    },
+    "data_tourism": {
+      "type": "json"
+    },
+    "data_transport": {
+      "type": "json"
+    },
+    "data_food": {
+      "type": "json"
+    },
+    "data_lodging": {
+      "type": "json"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "metasocial": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.meta-social"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "cms-runalotus",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@amicaldo/strapi-google-maps": "^1.0.2",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
+    "@strapi/plugin-graphql": "^4.11.7",
+    "@strapi/plugin-i18n": "4.11.7",
+    "@strapi/plugin-seo": "^1.9.2",
+    "@strapi/plugin-users-permissions": "4.11.7",
+    "@strapi/strapi": "4.11.7",
+    "mysql": "2.18.1",
+    "socket.io": "^4.7.1",
+    "strapi-plugin-ckeditor": "^0.1.0",
+    "strapi-plugin-rest-cache": "^4.2.7"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "ce9fee1a-3c68-41b8-9e71-33e2dc767651"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "optionalDependencies": {
+    "bufferutil": "^4.0.7",
+    "utf-8-validate": "^5.0.10"
+  }
+}

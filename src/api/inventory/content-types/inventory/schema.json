@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "singularName": "inventory",
+    "pluralName": "inventories",
+    "displayName": "inventory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_inventory": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::owner.owner",
+      "inversedBy": "inventory"
+    },
+    "uuid": {
+      "type": "uid",
+      "required": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subcategory.subcategory",
+      "mappedBy": "inventory"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "inventory"
+    },
+    "name": {
+      "type": "string"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "inventory"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "inventory"
+    },
+    "deliveries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::delivery.delivery",
+      "mappedBy": "inventory"
+    },
+    "tourisms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tourism.tourism",
+      "mappedBy": "inventory"
+    },
+    "stores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::store.store",
+      "mappedBy": "inventory"
+    }
+  }
+}
